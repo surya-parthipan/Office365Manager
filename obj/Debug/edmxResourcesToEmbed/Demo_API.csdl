@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Demo_API" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Demo_APIContainer1" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Login" ReturnType="Collection(Demo_API.Login_Result)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Table_1" EntityType="Demo_API.Table_1" />
+  </EntityContainer>
+  <ComplexType Name="Login_Result">
+    <Property Type="Boolean" Name="Result" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Table_4_Result">
+    <Property Type="Boolean" Name="Result" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="Table_1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

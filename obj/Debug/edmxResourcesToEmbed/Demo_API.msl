@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="Demo_API" />
+  <Alias Key="Target" Value="Demo_API.Store" />
+  <EntityContainerMapping CdmEntityContainer="Demo_APIContainer1" StorageEntityContainer="Demo_APIStoreContainer">
+    <FunctionImportMapping FunctionImportName="Login" FunctionName="Demo_API.Store.Login">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Demo_API.Login_Result">
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Table_1">
+      <EntityTypeMapping TypeName="Demo_API.Table_1">
+        <MappingFragment StoreEntitySet="Table_1">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
